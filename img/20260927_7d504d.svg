@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="日常相册宣传图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffaf4"/>
+      <stop offset="50%" stop-color="#ffeedd"/>
+      <stop offset="100%" stop-color="#ffe0c4"/>
+    </linearGradient>
+
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffc78e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffc78e" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="tableG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3b28a"/>
+      <stop offset="100%" stop-color="#d09b72"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <circle cx="980" cy="80" r="220" fill="url(#warmGlow)"/>
+
+  <!-- 装饰圆环 -->
+  <circle cx="1090" cy="120" r="120" fill="none" stroke="#f0c9a5" stroke-width="2" opacity="0.7"/>
+  <circle cx="1090" cy="120" r="86" fill="none" stroke="#f0c9a5" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- 桌面 -->
+  <rect x="0" y="320" width="1200" height="80" fill="url(#tableG)" opacity="0.55"/>
+  <path d="M0 320 H1200" stroke="#c98f66" stroke-width="2" opacity="0.6"/>
+
+  <!-- 咖啡杯（把手先画，压在杯身下面） -->
+  <path d="M992 270 a22 22 0 0 1 0 44" fill="none" stroke="#e08a5f" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- 杯身 -->
+  <path d="M902 252 h88 v54 a14 14 0 0 1 -14 14 h-60 a14 14 0 0 1 -14 -14 z" fill="#e08a5f"/>
+
+  <!-- 碟子 -->
+  <ellipse cx="946" cy="322" rx="74" ry="9" fill="#c98f66" opacity="0.35"/>
+
+  <!-- 热气 -->
+  <g fill="none" stroke="#e0a37f" stroke-width="4" stroke-linecap="round" opacity="0.85">
+    <path d="M926 240 q -14 -16 0 -32 q 14 -16 0 -32"/>
+    <path d="M958 244 q -12 -14 0 -28 q 12 -14 0 -28"/>
+  </g>
+
+  <!-- 绿植 -->
+  <g stroke="#7f9c6b" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M1100 272 V 196"/>
+    <path d="M1100 240 q -26 -10 -32 -36"/>
+    <path d="M1100 224 q 26 -12 32 -40"/>
+  </g>
+
+  <!-- 叶片 -->
+  <g fill="#8fae78">
+    <ellipse cx="1068" cy="204" rx="18" ry="10" transform="rotate(-35 1068 204)"/>
+    <ellipse cx="1132" cy="184" rx="18" ry="10" transform="rotate(35 1132 184)"/>
+    <ellipse cx="1100" cy="182" rx="10" ry="18"/>
+  </g>
+
+  <!-- 花盆 -->
+  <path d="M1054 270 L1146 270 L1134 320 L1066 320 Z" fill="#cf8b5f"/>
+
+  <!-- 文字 -->
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="88" y="176" font-size="66" font-weight="700" fill="#5a3a24" letter-spacing="8">日常相册</text>
+    <text x="92" y="220" font-size="16" fill="#b07a4e" letter-spacing="10">DAILY ALBUM</text>
+    <rect x="92" y="242" width="72" height="4" rx="2" fill="#e8a06a"/>
+  </g>
+</svg>
