@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="旅行相册宣传图">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101f36"/>
+      <stop offset="28%" stop-color="#2b4a68"/>
+      <stop offset="55%" stop-color="#b96a63"/>
+      <stop offset="76%" stop-color="#ef9a5a"/>
+      <stop offset="100%" stop-color="#ffd9a0"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c7296"/>
+      <stop offset="100%" stop-color="#5a5578"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b4066"/>
+      <stop offset="100%" stop-color="#252a44"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeNear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#181d30"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6cf" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#ffcb84" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffb066" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="scrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#060b16" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#060b16" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 天空 -->
+  <rect width="1200" height="400" fill="url(#sky)"/>
+
+  <!-- 星星 -->
+  <g fill="#ffffff">
+    <circle cx="80" cy="48" r="1.5" opacity="0.8"/>
+    <circle cx="160" cy="88" r="1.1" opacity="0.55"/>
+    <circle cx="248" cy="42" r="1.4" opacity="0.7"/>
+    <circle cx="330" cy="96" r="1" opacity="0.45"/>
+    <circle cx="430" cy="56" r="1.3" opacity="0.6"/>
+    <circle cx="520" cy="102" r="1" opacity="0.4"/>
+    <circle cx="610" cy="46" r="1.2" opacity="0.5"/>
+    <circle cx="700" cy="88" r="1" opacity="0.35"/>
+    <circle cx="1010" cy="60" r="1.2" opacity="0.5"/>
+    <circle cx="1100" cy="112" r="1" opacity="0.35"/>
+    <circle cx="1150" cy="52" r="1.3" opacity="0.5"/>
+    <circle cx="200" cy="130" r="1" opacity="0.3"/>
+  </g>
+
+  <!-- 夕阳 -->
+  <circle cx="900" cy="258" r="190" fill="url(#sunGlow)"/>
+  <circle cx="900" cy="258" r="56" fill="#ffeeb8"/>
+
+  <!-- 云层 -->
+  <g fill="#ffffff" opacity="0.16">
+    <ellipse cx="240" cy="150" rx="120" ry="20"/>
+    <ellipse cx="330" cy="138" rx="80" ry="15"/>
+    <ellipse cx="980" cy="140" rx="140" ry="18"/>
+    <ellipse cx="1080" cy="128" rx="90" ry="13"/>
+  </g>
+
+  <!-- 飞鸟 -->
+  <g fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.75">
+    <path d="M660 120 q10 -10 20 0 q10 -10 20 0"/>
+    <path d="M716 148 q8 -8 16 0 q8 -8 16 0"/>
+    <path d="M604 158 q7 -7 14 0 q7 -7 14 0"/>
+  </g>
+
+  <!-- 远山 -->
+  <path d="M0 268 Q60 198 130 232 Q190 260 250 222 Q330 170 420 230 Q490 274 560 238 Q640 192 720 244 Q790 290 860 252 Q940 206 1020 256 Q1090 298 1200 248 L1200 400 L0 400 Z" fill="url(#ridgeFar)" opacity="0.9"/>
+
+  <!-- 中景山 -->
+  <path d="M0 302 Q90 252 170 290 Q250 326 330 286 Q420 242 500 292 Q580 340 660 302 Q750 258 830 308 Q910 354 990 314 Q1080 270 1200 316 L1200 400 L0 400 Z" fill="url(#ridgeMid)"/>
+
+  <!-- 前景山丘 -->
+  <path d="M0 354 Q120 318 240 352 Q360 384 480 350 Q600 316 720 354 Q840 390 960 352 Q1080 316 1200 352 L1200 400 L0 400 Z" fill="url(#ridgeNear)"/>
+
+  <!-- 左侧压暗，保证文字清晰 -->
+  <rect width="1200" height="400" fill="url(#scrim)"/>
+
+  <!-- 文字 -->
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="88" y="176" font-size="66" font-weight="700" fill="#ffffff" letter-spacing="8">旅行相册</text>
+    <text x="92" y="220" font-size="16" fill="#ffd9a0" letter-spacing="10">TRAVEL ALBUM</text>
+    <rect x="92" y="242" width="72" height="4" rx="2" fill="#ffb066"/>
+  </g>
+</svg>
