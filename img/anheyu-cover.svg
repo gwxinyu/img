@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1120"/>
+      <stop offset="0.55" stop-color="#131f45"/>
+      <stop offset="1" stop-color="#1e2a6e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.12" r="0.65">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#93c5fd"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="hexoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#0e83cd"/>
+    </linearGradient>
+    <linearGradient id="fishGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#ffffff"/>
+    </pattern>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#60a5fa"/>
+    </marker>
+    <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+  <rect width="1200" height="675" fill="url(#dots)" opacity="0.05"/>
+
+  <!-- 顶部：分类标签 + 右上角标注 -->
+  <rect x="60" y="36" width="104" height="34" rx="17" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+  <text x="112" y="59" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#e2e8f0">技术教程</text>
+  <text x="1140" y="57" text-anchor="end" font-family="JetBrains Mono, Consolas, monospace" font-size="13" letter-spacing="2" fill="#ffffff" fill-opacity="0.45">2026 · SELF-HOSTED BLOG</text>
+
+  <!-- 标题 -->
+  <text x="600" y="122" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="54" font-weight="bold" letter-spacing="2" fill="url(#titleGrad)">从 Hexo 到 Anheyu</text>
+  <text x="600" y="160" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" fill="#cbd5e1" fill-opacity="0.85">框架对比 · 部署 · 升级 · 迁移 · Pro 授权 全指南</text>
+
+  <!-- Hexo 卡片 -->
+  <circle cx="250" cy="285" r="112" fill="none" stroke="#2dd4bf" stroke-opacity="0.15" stroke-dasharray="3 8"/>
+  <g filter="url(#cardShadow)">
+    <rect x="150" y="195" width="200" height="200" rx="28" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+  </g>
+  <path d="M306 285 L278 333.5 L222 333.5 L194 285 L222 236.5 L278 236.5 Z" fill="url(#hexoGrad)"/>
+  <text x="250" y="285" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, Consolas, monospace" font-size="48" font-weight="bold" fill="#ffffff">H</text>
+  <text x="250" y="432" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="33" font-weight="bold" letter-spacing="7" fill="#f8fafc">HEXO</text>
+  <text x="250" y="463" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#94a3b8">静态博客 · SSG</text>
+
+  <!-- 迁移箭头 -->
+  <text x="600" y="248" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" letter-spacing="3" fill="#cbd5e1" fill-opacity="0.8">部署 · 升级 · 迁移 · 进化</text>
+  <line x1="395" y1="295" x2="788" y2="295" stroke="url(#arrowGrad)" stroke-width="6" stroke-linecap="round" stroke-dasharray="16 12" marker-end="url(#arrowhead)">
+    <animate attributeName="stroke-dashoffset" values="28;0" dur="1.4s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Anheyu 卡片 -->
+  <circle cx="950" cy="285" r="112" fill="none" stroke="#3b82f6" stroke-opacity="0.18" stroke-dasharray="3 8"/>
+  <g filter="url(#cardShadow)">
+    <rect x="850" y="195" width="200" height="200" rx="28" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+  </g>
+  <circle cx="950" cy="285" r="62" fill="url(#fishGrad)"/>
+  <g transform="translate(950 285) rotate(-28)">
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0 0; 0 -6; 0 0" dur="2.6s" repeatCount="indefinite"/>
+    <ellipse cx="2" cy="0" rx="34" ry="17" fill="#ffffff"/>
+    <path d="M -28 0 L -50 -15 L -50 15 Z" fill="#ffffff"/>
+    <path d="M -2 -14 Q 6 -27 15 -14 Z" fill="#dbeafe"/>
+    <circle cx="18" cy="-4" r="4.5" fill="#1e40af"/>
+  </g>
+  <circle cx="905" cy="235" r="3" fill="#93c5fd" fill-opacity="0.8"/>
+  <circle cx="890" cy="250" r="2.2" fill="#93c5fd" fill-opacity="0.6"/>
+  <circle cx="918" cy="218" r="2" fill="#93c5fd" fill-opacity="0.5"/>
+  <path d="M908 332 q 10.5 -9 21 0 t 21 0 t 21 0 t 21 0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-opacity="0.85">
+    <animateTransform attributeName="transform" type="translate" values="0 0; 4 0; 0 0" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="950" y="432" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="29" font-weight="bold" letter-spacing="5" fill="#f8fafc">ANHEYU</text>
+  <text x="950" y="463" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#94a3b8">Go + Next.js · SSR</text>
+
+  <!-- 悬浮装饰 -->
+  <text x="95" y="585" font-family="JetBrains Mono, Consolas, monospace" font-size="56" fill="#38bdf8" fill-opacity="0.16">{ }
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="5s" repeatCount="indefinite"/>
+  </text>
+  <text x="1055" y="140" font-family="JetBrains Mono, Consolas, monospace" font-size="44" fill="#818cf8" fill-opacity="0.16">&lt;/&gt;
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -8; 0 0" dur="6s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Docker 容器组 -->
+  <text x="600" y="500" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="14" fill="#7dd3fc" fill-opacity="0.8">$ docker compose up -d</text>
+  <path d="M600 542 L600 552 L430 552 L430 558 M600 552 L770 552 L770 558" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+  <rect x="540" y="508" width="120" height="34" rx="10" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="600" y="530" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="13" fill="#e2e8f0">backend :8091</text>
+  <rect x="378" y="558" width="104" height="34" rx="10" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="430" y="580" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="13" fill="#e2e8f0">redis</text>
+  <rect x="704" y="558" width="132" height="34" rx="10" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="770" y="580" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="13" fill="#e2e8f0">postgres :17</text>
+
+  <!-- 底部波浪 -->
+  <path d="M0 622 C 200 592 400 652 600 627 C 800 602 1000 657 1200 622 L1200 675 L0 675 Z" fill="#3b82f6" fill-opacity="0.18"/>
+  <path d="M0 644 C 240 619 420 669 640 649 C 860 629 1040 669 1200 644 L1200 675 L0 675 Z" fill="#60a5fa" fill-opacity="0.14"/>
+</svg>
