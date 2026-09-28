@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070d14"/>
+      <stop offset="0.55" stop-color="#0b1622"/>
+      <stop offset="1" stop-color="#10202f"/>
+    </linearGradient>
+    <radialGradient id="moonGrad" cx="0.4" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#fca5a5"/>
+      <stop offset="0.55" stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#991b1b"/>
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ef4444" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#a5f3fc"/>
+    </linearGradient>
+    <linearGradient id="fogGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#164e63" stop-opacity="0"/>
+      <stop offset="1" stop-color="#164e63" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="moonBlur" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="cyanGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#22d3ee" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 夜空 -->
+  <rect width="1200" height="675" fill="url(#sky)"/>
+
+  <!-- 红月 -->
+  <circle cx="990" cy="150" r="130" fill="url(#moonGlow)" filter="url(#moonBlur)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="990" cy="150" r="62" fill="url(#moonGrad)"/>
+  <circle cx="972" cy="134" r="10" fill="#b91c1c" fill-opacity="0.5"/>
+  <circle cx="1006" cy="166" r="6" fill="#b91c1c" fill-opacity="0.4"/>
+
+  <!-- 星点 -->
+  <g fill="#cbd5e1">
+    <circle cx="120" cy="90" r="1.6" opacity="0.6"/>
+    <circle cx="300" cy="60" r="1.2" opacity="0.4"/>
+    <circle cx="520" cy="110" r="1.8" opacity="0.5"/>
+    <circle cx="700" cy="70" r="1.3" opacity="0.35"/>
+    <circle cx="860" cy="90" r="1.5" opacity="0.45"/>
+    <circle cx="1120" cy="300" r="1.4" opacity="0.35"/>
+    <circle cx="60" cy="240" r="1.3" opacity="0.4"/>
+    <circle cx="240" cy="160" r="1.1" opacity="0.3"/>
+  </g>
+
+  <!-- 废土城市剪影 -->
+  <g fill="#0b1218">
+    <rect x="0" y="520" width="1200" height="155"/>
+    <path d="M30 520 L30 430 L70 430 L70 470 L95 470 L95 520 Z"/>
+    <path d="M120 520 L120 380 L165 380 L165 410 L185 410 L185 520 Z"/>
+    <path d="M215 520 L215 450 L250 450 L255 420 L290 420 L290 520 Z"/>
+    <path d="M330 520 L330 360 L380 360 L380 520 Z"/>
+    <path d="M410 520 L410 440 L440 440 L440 400 L470 400 L470 520 Z"/>
+    <path d="M690 520 L690 420 L720 420 L720 380 L760 380 L760 520 Z"/>
+    <path d="M790 520 L790 450 L830 450 L830 410 L860 410 L860 520 Z"/>
+    <path d="M890 520 L890 390 L930 390 L930 430 L950 430 L950 520 Z"/>
+    <path cx="0" cy="0"/>
+    <path d="M980 520 L980 440 L1010 440 L1010 400 L1040 400 L1040 520 Z"/>
+    <path d="M1070 520 L1070 370 L1120 370 L1120 430 L1140 430 L1140 520 Z"/>
+  </g>
+  <!-- 零星亮灯 -->
+  <g fill="#67e8f9" opacity="0.55">
+    <rect x="138" y="400" width="5" height="7"/>
+    <rect x="153" y="430" width="5" height="7"/>
+    <rect x="345" y="385" width="5" height="7"/>
+    <rect x="362" y="420" width="5" height="7"/>
+    <rect x="705" y="440" width="5" height="7"/>
+    <rect x="735" y="400" width="5" height="7"/>
+    <rect x="905" y="415" width="5" height="7"/>
+    <rect x="1090" y="395" width="5" height="7"/>
+    <rect x="1105" y="450" width="5" height="7"/>
+  </g>
+
+  <!-- ===== 巨蚁剪影（主视觉） ===== -->
+  <g filter="url(#cyanGlow)">
+    <g fill="#0d151c" stroke="#1b2836" stroke-width="2">
+      <!-- 腹部 -->
+      <ellipse cx="600" cy="330" rx="66" ry="92"/>
+      <!-- 胸 -->
+      <ellipse cx="600" cy="212" rx="44" ry="40"/>
+      <!-- 头 -->
+      <circle cx="600" cy="140" r="40"/>
+      <!-- 上颚 -->
+      <path d="M575 112 L545 84 L568 122 Z"/>
+      <path d="M625 112 L655 84 L632 122 Z"/>
+      <!-- 触角 -->
+      <path d="M582 108 Q 540 60 500 66 Q 470 70 462 92" fill="none" stroke-width="5" stroke-linecap="round"/>
+      <path d="M618 108 Q 660 60 700 66 Q 730 70 738 92" fill="none" stroke-width="5" stroke-linecap="round"/>
+      <!-- 六足 -->
+      <path d="M556 200 Q 470 190 430 250 Q 405 290 415 330" fill="none" stroke-width="9" stroke-linecap="round"/>
+      <path d="M550 230 Q 460 240 425 305 Q 405 350 420 392" fill="none" stroke-width="9" stroke-linecap="round"/>
+      <path d="M556 262 Q 480 285 455 350 Q 440 395 458 432" fill="none" stroke-width="9" stroke-linecap="round"/>
+      <path d="M644 200 Q 730 190 770 250 Q 795 290 785 330" fill="none" stroke-width="9" stroke-linecap="round"/>
+      <path d="M650 230 Q 740 240 775 305 Q 795 350 780 392" fill="none" stroke-width="9" stroke-linecap="round"/>
+      <path d="M644 262 Q 720 285 745 350 Q 760 395 742 432" fill="none" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <!-- 眼（红光） -->
+    <circle cx="586" cy="132" r="6" fill="#ef4444">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="614" cy="132" r="6" fill="#ef4444">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 地面雾 -->
+  <rect x="0" y="470" width="1200" height="205" fill="url(#fogGrad)"/>
+  <ellipse cx="600" cy="560" rx="480" ry="60" fill="#155e75" fill-opacity="0.18"/>
+
+  <!-- 飘落的灰烬 -->
+  <g fill="#cbd5e1">
+    <circle cx="150" cy="200" r="2.2" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 90" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="120" r="1.8" opacity="0.4">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 110" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="260" r="2.5" opacity="0.45">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 80" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="760" cy="180" r="2" opacity="0.4">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 100" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="880" cy="300" r="1.6" opacity="0.35">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 70" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1080" cy="240" r="2.2" opacity="0.4">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 95" dur="7.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0" dur="7.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ===== 标题区 ===== -->
+  <rect x="60" y="60" width="128" height="36" rx="18" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.45"/>
+  <text x="124" y="84" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" fill="#a5f3fc">科技观察</text>
+
+  <text x="64" y="250" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="150" font-weight="bold" letter-spacing="6" fill="url(#titleGrad)" filter="url(#cyanGlow)">归墟</text>
+
+  <!-- 印章 -->
+  <g transform="rotate(-7 340 300)">
+    <rect x="300" y="262" width="84" height="84" rx="10" fill="#dc2626"/>
+    <text x="342" y="300" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">播放</text>
+    <text x="342" y="332" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">破亿</text>
+  </g>
+
+  <text x="66" y="330" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="24" letter-spacing="8" fill="#94a3b8">末日 · 废土 · 新物种时代</text>
+  <text x="66" y="368" font-family="JetBrains Mono, Consolas, monospace" font-size="15" letter-spacing="4" fill="#64748b">A ONE-MAN AI SHORT-FILM SERIES</text>
+
+  <!-- 参数胶囊 -->
+  <rect x="66" y="398" width="118" height="36" rx="18" fill="#ffffff" fill-opacity="0.06" stroke="#22d3ee" stroke-opacity="0.3"/>
+  <text x="125" y="421" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#a5f3fc">奇幻 · 求生</text>
+  <rect x="196" y="398" width="128" height="36" rx="18" fill="#ffffff" fill-opacity="0.06" stroke="#22d3ee" stroke-opacity="0.3"/>
+  <text x="260" y="421" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#a5f3fc">单集 8 分钟</text>
+  <rect x="336" y="398" width="106" height="36" rx="18" fill="#ffffff" fill-opacity="0.06" stroke="#22d3ee" stroke-opacity="0.3"/>
+  <text x="389" y="421" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#a5f3fc">一人剧组</text>
+
+  <text x="66" y="490" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#64748b">「从第一只巨蚁出现开始，城市失守，秩序崩塌。」</text>
+</svg>
