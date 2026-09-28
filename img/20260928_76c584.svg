@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+
+    <!-- 聚光灯径向渐变 -->
+    <radialGradient id="spotlight" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#4FACFE" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0B0F19" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- 六边形渐变（Hexo 侧） -->
+    <linearGradient id="hexoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#4FACFE" />
+    </linearGradient>
+
+    <!-- 鱼形/波浪渐变（Anheyu 侧） -->
+    <linearGradient id="anheyuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7E5F" />
+      <stop offset="50%" stop-color="#FEB47B" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </linearGradient>
+
+    <!-- 过渡箭头渐变 -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0" />
+      <stop offset="50%" stop-color="#4FACFE" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF7E5F" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- 发光滤镜 -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- 背景网格图案 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A2F45" stroke-width="1" stroke-opacity="0.5" />
+    </pattern>
+    
+    <!-- 点阵图案 -->
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#4FACFE" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- 背景层 -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <rect width="1200" height="630" fill="url(#dots)" />
+  <rect width="1200" height="630" fill="url(#spotlight)" />
+
+  <!-- 装饰性模糊光斑 -->
+  <circle cx="200" cy="150" r="180" fill="#4FACFE" fill-opacity="0.08" filter="url(#softGlow)" />
+  <circle cx="1000" cy="500" r="220" fill="#FF7E5F" fill-opacity="0.06" filter="url(#softGlow)" />
+
+  <!-- 顶部标签 -->
+  <g transform="translate(600, 80)">
+    <rect x="-180" y="-16" width="360" height="32" rx="16" fill="none" stroke="#4FACFE" stroke-width="1" stroke-opacity="0.5" />
+    <text x="0" y="6" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#00F2FE" text-anchor="middle" letter-spacing="2">框架对比与迁移全指南</text>
+  </g>
+
+  <!-- ================= 左侧：Hexo 图形（结构化/代码） ================= -->
+  <g transform="translate(180, 315)">
+    <!-- 六边形外框 -->
+    <polygon points="0,-80 69,-40 69,40 0,80 -69,40 -69,-40" fill="none" stroke="url(#hexoGrad)" stroke-width="3" filter="url(#glow)" />
+    <!-- 内部代码块线条 -->
+    <line x1="-40" y1="-30" x2="40" y2="-30" stroke="#00F2FE" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round" />
+    <line x1="-40" y1="-10" x2="20" y2="-10" stroke="#00F2FE" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round" />
+    <line x1="-40" y1="10" x2="30" y2="10" stroke="#00F2FE" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" />
+    <line x1="-40" y1="30" x2="-10" y2="30" stroke="#00F2FE" stroke-width="2" stroke-opacity="0.3" stroke-linecap="round" />
+    
+    <!-- 浮动代码元素 -->
+    <rect x="-90" y="-120" width="60" height="20" rx="4" fill="#1A1B41" stroke="#4FACFE" stroke-width="1" stroke-opacity="0.4" />
+    <text x="-60" y="-106" font-family="monospace" font-size="10" fill="#00F2FE" text-anchor="middle" opacity="0.8">&lt;hexo&gt;</text>
+    
+    <rect x="80" y="80" width="80" height="20" rx="4" fill="#1A1B41" stroke="#4FACFE" stroke-width="1" stroke-opacity="0.4" />
+    <text x="120" y="94" font-family="monospace" font-size="10" fill="#00F2FE" text-anchor="middle" opacity="0.8">npm run build</text>
+
+    <!-- Hexo 标签 -->
+    <text x="0" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#00F2FE" text-anchor="middle" opacity="0.9">Hexo</text>
+  </g>
+
+  <!-- ================= 右侧：Anheyu 图形（流畅/现代/安和鱼） ================= -->
+  <g transform="translate(1020, 315)">
+    <!-- 流畅的鱼形/波浪曲线 -->
+    <path d="M -80,-60 C -20,-80 40,-20 80,0 C 40,20 -20,80 -80,60 C -40,20 -40,-20 -80,-60 Z" fill="none" stroke="url(#anheyuGrad)" stroke-width="3" filter="url(#glow)" />
+    
+    <!-- 内部波浪线条 -->
+    <path d="M -50,-30 Q 0,-50 50,-10" fill="none" stroke="#FF7E5F" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round" />
+    <path d="M -50,30 Q 0,50 50,10" fill="none" stroke="#FFD700" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round" />
+    <circle cx="40" cy="-10" r="4" fill="#FEB47B" filter="url(#glow)" />
+    
+    <!-- 浮动现代 UI 元素 -->
+    <rect x="80" y="-120" width="70" height="24" rx="6" fill="#1A1B41" stroke="#FF7E5F" stroke-width="1" stroke-opacity="0.4" />
+    <text x="115" y="-104" font-family="monospace" font-size="10" fill="#FEB47B" text-anchor="middle" opacity="0.8">deploy()</text>
+    
+    <rect x="-140" y="80" width="80" height="24" rx="6" fill="#1A1B41" stroke="#FFD700" stroke-width="1" stroke-opacity="0.4" />
+    <text x="-100" y="96" font-family="monospace" font-size="10" fill="#FFD700" text-anchor="middle" opacity="0.8">升级完成</text>
+
+    <!-- Anheyu 标签 -->
+    <text x="0" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FEB47B" text-anchor="middle" opacity="0.9">Anheyu</text>
+  </g>
+
+  <!-- ================= 中间：迁移/升级过渡箭头 ================= -->
+  <g transform="translate(600, 315)">
+    <!-- 发光主线 -->
+    <line x1="-200" y1="0" x2="200" y2="0" stroke="url(#arrowGrad)" stroke-width="4" stroke-linecap="round" filter="url(#glow)" />
+    
+    <!-- 动态粒子 -->
+    <circle cx="-140" cy="0" r="3" fill="#00F2FE" filter="url(#glow)" />
+    <circle cx="-60" cy="0" r="4" fill="#4FACFE" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="6" fill="#FFF" filter="url(#glow)" />
+    <circle cx="60" cy="0" r="4" fill="#FEB47B" filter="url(#glow)" />
+    <circle cx="140" cy="0" r="3" fill="#FF7E5F" filter="url(#glow)" />
+
+    <!-- 箭头 -->
+    <path d="M 180,-12 L 210,0 L 180,12 Z" fill="#FFD700" filter="url(#glow)" />
+    
+    <!-- 升级/迁移标签 -->
+    <text x="0" y="-30" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="0.8">迁移 &amp; 升级</text>
+  </g>
+
+  <!-- ================= 底部：主标题与副标题 ================= -->
+  <g transform="translate(600, 480)">
+    <!-- 主标题 -->
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+      从 <tspan fill="#00F2FE">Hexo</tspan> 到 <tspan fill="#FF7E5F">Anheyu</tspan>
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="0" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="400" fill="#94A3B8" text-anchor="middle" letter-spacing="2">
+      安和鱼框架对比、部署、升级与迁移全指南
+    </text>
+    
+    <!-- 底部装饰线 -->
+    <line x1="-200" y1="90" x2="200" y2="90" stroke="#4FACFE" stroke-width="2" stroke-opacity="0.3" stroke-linecap="round" />
+    <line x1="-40" y1="90" x2="40" y2="90" stroke="#FF7E5F" stroke-width="2" stroke-opacity="0.8" stroke-linecap="round" />
+  </g>
+
+  <!-- 底部标签 -->
+  <g transform="translate(600, 600)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#4FACFE" text-anchor="middle" letter-spacing="4" opacity="0.6">
+      框架对比 · 部署 · 升级 · 迁移
+    </text>
+  </g>
+
+  <!-- 角落装饰 -->
+  <path d="M 40,40 L 80,40 M 40,40 L 40,80" fill="none" stroke="#4FACFE" stroke-width="2" stroke-opacity="0.4" />
+  <path d="M 1160,40 L 1120,40 M 1160,40 L 1160,80" fill="none" stroke="#FF7E5F" stroke-width="2" stroke-opacity="0.4" />
+  <path d="M 40,590 L 80,590 M 40,590 L 40,550" fill="none" stroke="#4FACFE" stroke-width="2" stroke-opacity="0.4" />
+  <path d="M 1160,590 L 1120,590 M 1160,590 L 1160,550" fill="none" stroke="#FF7E5F" stroke-width="2" stroke-opacity="0.4" />
+
+</svg>
